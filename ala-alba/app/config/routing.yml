@@ -1,0 +1,41 @@
+alba_order.info:
+    resource: "@AlbaBundle/Controller/Order_infoController.php"
+    type:     annotation
+
+alba_order.info:
+    resource: "@AlbaBundle/Controller/Order_infoController.php"
+    type:     annotation
+
+alba_order.info:
+    resource: "@AlbaBundle/Controller/Order_infoController.php"
+    type:     annotation
+
+alba_rooms:
+    resource: "@AlbaBundle/Controller/RoomsController.php"
+    type:     annotation
+
+alba_rooms:
+    resource: "@AlbaBundle/Controller/RoomsController.php"
+    type:     annotation
+
+alba_user:
+    resource: "@AlbaBundle/Controller/UserController.php"
+    type:     annotation
+
+alba:
+    resource: "@AlbaBundle/Resources/config"
+    prefix:   /
+    type:     annotation
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+admin:
+    resource: "@AlbaBundle/Controller/Order_infoController.php"
+    type: annotation
+    prefix: /admin
+
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

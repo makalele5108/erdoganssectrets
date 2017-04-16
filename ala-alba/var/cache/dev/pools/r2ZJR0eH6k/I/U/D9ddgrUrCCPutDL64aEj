@@ -1,0 +1,3 @@
+1523930957
+%255BAlba%255CBundle%255CEntity%255CRooms%2524orders%255D%255B1%255D
+a:1:{i:0;O:30:"Doctrine\ORM\Mapping\OneToMany":6:{s:8:"mappedBy";s:5:"rooms";s:12:"targetEntity";s:29:"Alba\Bundle\Entity\Order_info";s:7:"cascade";N;s:5:"fetch";s:4:"LAZY";s:13:"orphanRemoval";b:0;s:7:"indexBy";N;}}

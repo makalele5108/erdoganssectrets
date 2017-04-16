@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Order_infos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Place</th>
+                <th>City</th>
+                <th>Zipcode</th>
+                <th>Country</th>
+                <th>Phonenumber</th>
+                <th>Arrival</th>
+                <th>Departure</th>
+                <th>Creditcard</th>
+                <th>Cardowner</th>
+                <th>Kindpayment</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for order_info in order_infos %}
+            <tr>
+                <td><a href="{{ path('order_info_show', { 'id': order_info.id }) }}">{{ order_info.id }}</a></td>
+                <td>{{ order_info.name }}</td>
+                <td>{{ order_info.lastname }}</td>
+                <td>{{ order_info.email }}</td>
+                <td>{{ order_info.place }}</td>
+                <td>{{ order_info.city }}</td>
+                <td>{{ order_info.zipcode }}</td>
+                <td>{{ order_info.country }}</td>
+                <td>{{ order_info.phoneNumber }}</td>
+                <td>{% if order_info.arrival %}{{ order_info.arrival|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if order_info.departure %}{{ order_info.departure|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ order_info.creditcard }}</td>
+                <td>{{ order_info.cardOwner }}</td>
+                <td>{{ order_info.kindPayment }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('order_info_show', { 'id': order_info.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('order_info_edit', { 'id': order_info.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('order_info_new') }}">Create a new order_info</a>
+        </li>
+    </ul>
+{% endblock %}

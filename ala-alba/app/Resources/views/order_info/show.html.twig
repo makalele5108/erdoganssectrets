@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Order_info</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ order_info.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ order_info.name }}</td>
+            </tr>
+            <tr>
+                <th>Lastname</th>
+                <td>{{ order_info.lastname }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ order_info.email }}</td>
+            </tr>
+            <tr>
+                <th>Place</th>
+                <td>{{ order_info.place }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ order_info.city }}</td>
+            </tr>
+            <tr>
+                <th>Zipcode</th>
+                <td>{{ order_info.zipcode }}</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>{{ order_info.country }}</td>
+            </tr>
+            <tr>
+                <th>Phonenumber</th>
+                <td>{{ order_info.phoneNumber }}</td>
+            </tr>
+            <tr>
+                <th>Arrival</th>
+                <td>{% if order_info.arrival %}{{ order_info.arrival|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Departure</th>
+                <td>{% if order_info.departure %}{{ order_info.departure|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Creditcard</th>
+                <td>{{ order_info.creditcard }}</td>
+            </tr>
+            <tr>
+                <th>Cardowner</th>
+                <td>{{ order_info.cardOwner }}</td>
+            </tr>
+            <tr>
+                <th>Kindpayment</th>
+                <td>{{ order_info.kindPayment }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('order_info_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('order_info_edit', { 'id': order_info.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

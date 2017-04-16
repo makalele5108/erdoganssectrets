@@ -1,0 +1,75 @@
+<?php
+
+/* @FOSUser/Group/show_content.html.twig */
+class __TwigTemplate_7451f163c37beae35526081fdc9fbedc5283e2bec32953a95b3684f1d8bcc924 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $__internal_2e8a02db9a1e16d8c66e6d89b9f4fcd95506fe693bbc89aa70e1a69e126c35ea = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2e8a02db9a1e16d8c66e6d89b9f4fcd95506fe693bbc89aa70e1a69e126c35ea->enter($__internal_2e8a02db9a1e16d8c66e6d89b9f4fcd95506fe693bbc89aa70e1a69e126c35ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Group/show_content.html.twig"));
+
+        $__internal_51e3f1f66c42367189459a91f2ea0ffff35367b396ca15f10052c10baeacfbfd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_51e3f1f66c42367189459a91f2ea0ffff35367b396ca15f10052c10baeacfbfd->enter($__internal_51e3f1f66c42367189459a91f2ea0ffff35367b396ca15f10052c10baeacfbfd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Group/show_content.html.twig"));
+
+        // line 2
+        echo "
+<div class=\"fos_user_group_show\">
+    <p>";
+        // line 4
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("group.show.name", array(), "FOSUserBundle"), "html", null, true);
+        echo ": ";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["group"]) ? $context["group"] : $this->getContext($context, "group")), "getName", array(), "method"), "html", null, true);
+        echo "</p>
+</div>
+";
+        
+        $__internal_2e8a02db9a1e16d8c66e6d89b9f4fcd95506fe693bbc89aa70e1a69e126c35ea->leave($__internal_2e8a02db9a1e16d8c66e6d89b9f4fcd95506fe693bbc89aa70e1a69e126c35ea_prof);
+
+        
+        $__internal_51e3f1f66c42367189459a91f2ea0ffff35367b396ca15f10052c10baeacfbfd->leave($__internal_51e3f1f66c42367189459a91f2ea0ffff35367b396ca15f10052c10baeacfbfd_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "@FOSUser/Group/show_content.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  29 => 4,  25 => 2,);
+    }
+
+    /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
+    public function getSource()
+    {
+        @trigger_error('The '.__METHOD__.' method is deprecated since version 1.27 and will be removed in 2.0. Use getSourceContext() instead.', E_USER_DEPRECATED);
+
+        return $this->getSourceContext()->getCode();
+    }
+
+    public function getSourceContext()
+    {
+        return new Twig_Source("{% trans_default_domain 'FOSUserBundle' %}
+
+<div class=\"fos_user_group_show\">
+    <p>{{ 'group.show.name'|trans }}: {{ group.getName() }}</p>
+</div>
+", "@FOSUser/Group/show_content.html.twig", "C:\\xampp\\htdocs\\ALA\\ala-alba\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Group\\show_content.html.twig");
+    }
+}
